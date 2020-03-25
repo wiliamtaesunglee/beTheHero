@@ -1,17 +1,10 @@
 const express = require('express');
 
+const routes = require('./routes');
+
 const app = express();
 
 app.use(express.json());
-
-app.post('/users',(req, resp)=> {
-  const body = req.body;
-
-  console.log(body)
-
-  return resp.json({
-    response: req.name
-  })
-})
+app.use(routes);
 
 app.listen(3333);
