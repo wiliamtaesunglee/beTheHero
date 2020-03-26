@@ -1,13 +1,15 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Logon from './pages/Logon';
+import Logon from './pages/logon';
+import Register from  './pages/Register'
 
 const Routes = () => {
   return(
     <BrowserRouter>
       <Switch>
-        <Route path="/" component={Logon}/>
+        <Route path="/" exact component={Logon}/>
+        <Route path="/register" component={Register}/>
       </Switch>
     </BrowserRouter>
   );
